@@ -139,7 +139,7 @@ O Operador Ternário é uma forma compacta de escrever um `if-else` simples. Ele
 ```c
 condição ? valor_se_verdadeiro : valor_se_falso;
 ```
-Veja como ficaria o do Tópico `2.1.3` com o Operador Ternário:
+Veja como ficaria o do Tópico `2.4` com o Operador Ternário:
 ```c
 int idade = 20;
 
