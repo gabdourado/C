@@ -1,6 +1,6 @@
 ## 4.0 Definição de Arrays
 
-Um **Array** - ou vetor - é uma Estrutura de Dados que armazena **múltiplos valores de mesmo tipo** em uma única variável. Ele permite que você armazene uma coleção de dados de maneira contígua - lado á lado -, acessando cada valor por um **índice**.
+Um **Array** - ou vetor - é uma Estrutura de Dados que armazena **múltiplos valores de mesmo tipo** em uma única variável. Ele permite que você armazene uma coleção de dados de maneira contígua (lado à lado), acessando cada valor por um **índice**.
 
 Observe abaixo um **exemplo visual** de um array de `5` números inteiros:
 
