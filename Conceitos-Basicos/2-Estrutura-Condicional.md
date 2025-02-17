@@ -71,7 +71,7 @@ if (nota >= 9) {
     printf("Reprovado.\n");
 }
 ```
-Aqui, a **variável** `nota` **não** é maior ou igual a `9`, então seguimos para a próxima linha, o `else-if`. Opa! A variável  **variável** `nota` é maior ou igual a `7`, dessa forma, o bloco `else-if` será executado e a mensagem "Aprovado!." será **será exibida na tela**.
+Aqui, a **variável** `nota` **não** é maior ou igual a `9`, então seguimos para a próxima linha, o `else-if`. Opa! A variável  **variável** `nota` é maior ou igual a `7`, dessa forma, o bloco `else-if` será executado e a mensagem "Aprovado!" será **será exibida na tela**.
 
 ## 2.6 Usando os Operadores Relacionais e Lógicos  
 
