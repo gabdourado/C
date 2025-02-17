@@ -132,7 +132,7 @@ int main() {
 
 Um **Array de Struct** é uma coleção de elementos onde cada elemento é uma `struct`. Isso é útil quando você tem várias instâncias de um tipo de estrutura e precisa armazená-las de forma organizada. 
 
-No exemplo abaixo, criamos uma `struct` chamada `aluno` e, em seguida, um **array de structs** para armazenar informações de vários alunos:
+No exemplo abaixo, criamos uma `struct` chamada `aluno` e, em seguida, um **array de structs** para armazenar informações de vários alunos (`turma`):
 
 ```c
 #include <stdio.h>
