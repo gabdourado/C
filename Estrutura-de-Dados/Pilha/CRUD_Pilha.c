@@ -60,7 +60,6 @@ int pilha_vazia (PPilha P) {
         V) E ponta a pilha para o seu termo posterior (proximo da pilha)
         VI) Libera a posição (topo da pilha)
 */
-
 float pilha_pop (PPilha P) {
     PLista no_saindo = (PLista) malloc (sizeof(Lista));
     float info_sai;
