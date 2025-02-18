@@ -1,4 +1,5 @@
 /* FUNÇÕES BÁSICAS PARA A MANIPULAÇÃO DE PILHAS - CRUD (Create, Read, Update, Delete) */
+
 #include <stdio.h>
 #include <stdlib.h>
 
