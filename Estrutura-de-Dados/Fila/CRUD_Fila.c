@@ -108,38 +108,38 @@ void fila_imprime (PFila F) {
 
 int main (void) {
     /* Criando uma fila e atribuindo três elementos a ela*/
-    PFila fila1 = fila_cria();
-    fila_enqueue (fila1, 1);
-    fila_enqueue (fila1, 2);
-    fila_enqueue (fila1, 3);
+    PFila F = fila_cria();
+    fila_enqueue (F, 1);
+    fila_enqueue (F, 2);
+    fila_enqueue (F, 3);
 
     /* Mostrando a fila com os três elementos */
     printf("Minha fila com todos os elementos:\n");
-    fila_imprime(fila1);
+    fila_imprime(F);
 
     /*removendo o elemento do inicio da fila */
     int removido;
-    removido = fila_dequeue(fila1);
+    removido = fila_dequeue(F);
     printf("Removendo o elemento do inicio da fila:\n");
-    fila_imprime(fila1);
+    fila_imprime(F);
 
     /* Adicionando mais um elemento ao fim da fila */
     printf("Adicionando mais um elemento ao final da fila:\n");
-    fila_enqueue (fila1, 4);
-    fila_imprime(fila1);
+    fila_enqueue (F, 4);
+    fila_imprime(F);
 
     /* Deletando até acabar todos os elementos */
     printf("Removendo gradativamente:\n");
-    removido = fila_dequeue(fila1);
-    fila_imprime(fila1);
-    removido = fila_dequeue(fila1);
-    fila_imprime(fila1);
-    removido = fila_dequeue(fila1);
-    fila_imprime(fila1);
-    removido = fila_dequeue(fila1);
+    removido = fila_dequeue(F);
+    fila_imprime(F);
+    removido = fila_dequeue(F);
+    fila_imprime(F);
+    removido = fila_dequeue(F);
+    fila_imprime(F);
+    removido = fila_dequeue(F);
 
     /* Libera toda a fila (que já ta vazia)*/
-    fila_libera(fila1);
+    fila_libera(F);
 
     printf("Fim do Programa!\n");
 
