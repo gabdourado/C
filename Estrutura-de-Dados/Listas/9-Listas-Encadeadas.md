@@ -38,7 +38,7 @@ Observe abaixo um **exemplo visual** de uma Lista Encadeada de `5` números 
 Como podemos ver, a lista não precisa de espaços contíguos. Assim, é fácil aumentar ou diminuir seu tamanho conforme a necessidade, tornando a **Lista Encadeada** muito mais flexível em comparação ao **Array**.
 ## 9.2 Inserção de um Nó
 
-A **Inserção** de um nó em uma Lista Encadeada pode ser feita de diferentes formas, dependendo de onde o novo nó será colocado. Vamos analisar 3 casos distintos:
+A **Inserção** de um nó em uma Lista Encadeada pode ser feita de diferentes formas, dependendo de onde o novo nó será colocado. Vamos analisar três casos distintos:
 ### 9.2.1 Inserção no Início da Lista 
 
 Inserir um nó no início da lista é uma operação simples e eficiente. O novo nó se torna o primeiro nó da lista, e o ponteiro da lista é atualizado para apontar para ele.
@@ -95,7 +95,7 @@ Neste caso, o último nó da lista, com valor `40`, tem seu ponteiro alterado pa
 
 ## 9.3 Remoção de um Nó
 
-Na **remoção de um nó** de uma lista encadeada, devemos considerar os três casos distintos vistos na inserção:
+Na **Remoção** de um nó em uma lista encadeada, devemos considerar os três casos distintos vistos na inserção:
 
 ### 9.3.1 Remoção do Nó Cabeça da Lista
 
