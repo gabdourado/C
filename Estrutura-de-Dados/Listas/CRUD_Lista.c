@@ -1,4 +1,5 @@
-//FUNÇÕES BÁSICAS PARA A MANIPULAÇÃO DE LISTAS ENCADEADAS - CRUD (Create, Read, Update, Delete)
+/* FUNÇÕES BÁSICAS PARA A MANIPULAÇÃO DE LISTAS ENCADEADAS - CRUD (Create, Read, Update, Delete) */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -30,19 +31,6 @@ PLista lista_insere (PLista L, float elemento) {
     novo_no->info = elemento;
     novo_no->prox = L;
     return novo_no;
-}
-
-/*
-    Função que imprime os nós de uma lista:
-    I) Usar uma variável auxliar (lista auxiliar) para percorrer a lista
-    II) Percorrer mostrando cada alemento até chegar onde o último elemento aponta, ou seja, NULL
-*/
-void lista_imprime (PLista L) {
-    PLista lista_aux = L;
-    while (lista_aux != NULL) {
-        printf("%.2f\t", lista_aux->info);
-        lista_aux = lista_aux->prox;
-    }
 }
 
 /*
@@ -89,6 +77,19 @@ void lista_deleta(PLista L) {
         PLista ref_prox = lista_aux->prox;
         free(lista_aux);
         lista_aux = ref_prox;
+    }
+}
+
+/*
+    Função que imprime os nós de uma lista:
+    I) Usar uma variável auxliar (lista auxiliar) para percorrer a lista
+    II) Percorrer mostrando cada alemento até chegar onde o último elemento aponta, ou seja, NULL
+*/
+void lista_imprime (PLista L) {
+    PLista lista_aux = L;
+    while (lista_aux != NULL) {
+        printf("%.2f\t", lista_aux->info);
+        lista_aux = lista_aux->prox;
     }
 }
 
