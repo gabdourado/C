@@ -8,20 +8,6 @@ Uma **Lista Simplesmente Encadeada** é uma Estrutura de Dados **Dinâmica** com
 A principal característica dessa estrutura é que os nós **não** precisam estar **armazenados em posições consecutivas na memória**. Em vez disso, cada nó aponta explicitamente para o próximo, formando uma cadeia de elementos.
 
 O primeiro nó da lista é chamado de **Cabeça (Head)** e o último nó aponta para `NULL`, indicando o fim da lista.
-## 9.1 Tamanho Dinâmico
-
-As **Estruturas de Dados** estudadas até agora, como **Arrays** e **Matrizes** armazenam elementos de forma **contígua** na memória, o que pode limitar a escalabilidade devido à necessidade de realocação para expansão, impactando o desempenho.
-
-Observe abaixo um **exemplo visual** de um Array de `5` números inteiros:
-
-| **Endereço** | **Valor** |
-| ------------ | --------- |
-| `0x001`      | 10        |
-| `0x002`      | 20        |
-| `0x003`      | 30        |
-| `0x004`      | 40        |
-
-Em contraste, as **Listas Encadeadas não exigem armazenamento Contíguo**. Isso significa que elas podem crescer e diminuir dinamicamente conforme a necessidade, o que torna o uso da memória mais eficiente e facilita operações como inserções e remoções.
 
 Observe abaixo um **exemplo visual** de uma Lista Encadeada de `5` números inteiros:
 
@@ -35,8 +21,8 @@ Observe abaixo um **exemplo visual** de uma Lista Encadeada de `5` números 
 |   `0x006`    |    20     |   `0x007`   |
 |   `0x007`    |    30     |   `0x004`   |
 
-Como podemos ver, a lista não precisa de espaços contíguos. Assim, é fácil aumentar ou diminuir seu tamanho conforme a necessidade, tornando a **Lista Encadeada** muito mais flexível em comparação ao **Array**.
-## 9.2 Inserção de um Nó
+O **Ponteiro da Lista** aponta para o primeiro nó, localizado no endereço de memória `0x001`. Esse nó contém o valor `10` e possui um ponteiro para o próximo elemento, que está em `0x006`. Esse processo se repete de nó em nó, formando uma cadeia até chegar ao último elemento (`40`), cujo ponteiro aponta para `NULL`, indicando o fim da lista.
+## 9.1 Inserção de um Nó
 
 A **Inserção** de um nó em uma Lista Encadeada pode ser feita de diferentes formas, dependendo de onde o novo nó será colocado. Vamos analisar três casos distintos:
 ### 9.2.1 Inserção no Início da Lista 
@@ -146,3 +132,40 @@ Observe como seria a **remoção** do elemento `20` da lista, que está no **mei
 |   `0x007`    |    30     |   `0x004`   |
 
 Para remover o nó com o valor `20`, o ponteiro do nó anterior (que contém o valor `10` e aponta para `0x006`) deve ser alterado para apontar para o nó seguinte a `20`, ou seja, o nó com o valor `30` (endereço `0x007`). Após esse ajuste, o nó com o valor `20` é desconectado e removido da lista, sem a necessidade de mover os outros nós.
+
+## 9.4 Vantagem das Listas Encadeadas: Tamanho Dinâmico
+
+As **Estruturas de Dados** estudadas até agora, como **Arrays** e **Matrizes** armazenam elementos de forma **contígua** na memória, o que pode limitar a escalabilidade devido à necessidade de realocação para expansão, impactando o desempenho.
+
+Observe abaixo um **exemplo visual** de um Array de `5` números inteiros:
+
+| **Endereço** | **Valor** |
+| ------------ | --------- |
+| `0x001`      | 2         |
+| `0x002`      | 3         |
+| `0x003`      | 5         |
+| `0x004`      | 7         |
+| `0x005`      | 11        |
+
+Em contraste, as **Listas Encadeadas não exigem armazenamento Contíguo**. Isso significa que elas podem crescer e diminuir dinamicamente conforme a necessidade, o que torna o uso da memória mais eficiente e facilita operações como inserções e remoções.
+
+Observe agora como os os mesmos `5` números inteiros do array anterior seriam organizados em uma Lista Encadeada:
+
+| **Endereço** | **Valor** | **Próximo** |
+| :----------: | :-------: | :---------: |
+|   `0x001`    |     2     |   `0x006`   |
+|   `0x002`    |    11     |   `NULL`    |
+|   `0x003`    |           |             |
+|   `0x004`    |     7     |   `0x002`   |
+|   `0x005`    |           |             |
+|   `0x006`    |     3     |   `0x007`   |
+|   `0x007`    |     5     |   `0x004`   |
+
+Como podemos ver, a lista não precisa de espaços contíguos. Assim, é fácil aumentar ou diminuir seu tamanho conforme a necessidade, tornando a **Lista Encadeada** muito mais flexível em comparação ao **Array**.
+
+## 9.5 Desvantagem das Listas Encadeadas: Acesso Sequencial
+
+Diferente dos **arrays**, onde é possível acessar diretamente qualquer elemento pelo índice em tempo $O(1)^{1}$, as **Listas Simplesmente Encadeadas** possuem **Acesso Sequencial**. Isso significa que, para encontrar um elemento específico, é necessário percorrer a lista **desde o primeiro nó até o desejado**, o que pode levar tempo $O(n)$ no pior caso.
+
+---
+$1.$ Os símbolos  $O(1)$ e $O(n)$ fazem parte da **Notação Big-O**, uma forma Matemática de descrever o **Comportamento** de Algoritmos. Se ainda não sabe sobre esse assunto, tenho uma seção explicando sobre Complexidade de Algoritmos.
