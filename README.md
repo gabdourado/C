@@ -1,7 +1,7 @@
 # Conhecimento em Programação em C
-No começo da jornada na programação, é comum encontrar dificuldades para entender os conceitos fundamentais. 
+No começo da jornada em Programação, é comum encontrar dificuldades para entender os conceitos fundamentais. 
 
-Este repositório foi criado para oferecer um material didático e acessível, auxiliando iniciantes a construir uma base sólida em Programação e Estruturas de Dados. 
+Este repositório foi criado para oferecer um material didático e acessível, auxiliando iniciantes a **construir uma base sólida** em Programação e Estruturas de Dados. 
 
 Aqui, você encontrará explicações detalhadas, exemplos práticos e implementações em C, tornando o aprendizado mais claro e intuitivo.
 
