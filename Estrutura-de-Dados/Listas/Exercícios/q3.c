@@ -46,8 +46,6 @@ int main(void) {
 
     printf("O último elemento é %d na posição de memória %p\n", PtrUltimo->info, PtrUltimo);
 
-    lista_deleta(L);
-    lista_deleta(PtrUltimo);
-    
+    lista_deleta(L);    
     return 0;
 }
