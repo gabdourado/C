@@ -45,10 +45,7 @@ int main (void) {
     printf("Pilha sem alterações:\n");
     pilha_imprime(P);
 
-
-    /* Liberando a pilha */
     pilha_libera(P);
-
     
     return 0;
 }
