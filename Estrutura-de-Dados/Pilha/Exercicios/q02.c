@@ -70,7 +70,6 @@ int main (void) {
     printf("Pilha P1 após a concatenação:\n");
     pilha_imprime(P1);
 
-
     pilha_libera(P1);
     pilha_libera(P2);
 
