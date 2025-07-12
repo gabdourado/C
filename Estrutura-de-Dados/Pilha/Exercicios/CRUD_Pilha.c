@@ -55,7 +55,7 @@ int pilha_vazia (PPilha P) {
 /*
     Função que desempinha (retira um elemento do topo da lista):
         I) Cria um nó para ajudar na manipulação do novo primeiro elemento da pilha
-        II) Cria a variável que iráser retornada com o valor do elemento desempilhado
+        II) Cria a variável que irá ser retornada com o valor do elemento desempilhado
         III) Verifica se a lista já não está vazia
         IV) Caso não, guarda no nó que sai o valor do primeiro elemento da pilha (que irá ser desempilhado)
         V) E ponta a pilha para o seu termo posterior (proximo da pilha)
@@ -96,34 +96,4 @@ void pilha_imprime (PPilha P) {
         printf("%.2f\n", lista_aux->info);
         lista_aux =lista_aux->prox;
     }
-}
-
-int main (void) {
-    /* Criando uma pilha e fazendo push */
-    PPilha P;
-    P = pilha_cria();
-    pilha_push(P, 2);
-    pilha_push(P, 3);
-    pilha_push(P, 1);
-    pilha_push(P, 2);
-    pilha_push(P, 4);
-
-    /* Imprimindo a pilha para teste*/
-    printf("Pilha com todos os elementos empilhado:\n");
-    pilha_imprime(P);
-
-    /* Retirando um elemento do topo da lista (pop)*/
-    float saiu = pilha_pop(P);
-
-    /* Imprimindo novamente a lista*/
-    printf("Após um pop:\n");
-    pilha_imprime(P);
-
-
-    /* Liberando a pilha */
-    pilha_libera(P);
-
-    printf("Fim do Programa\n");
-    
-    return 0;
 }
