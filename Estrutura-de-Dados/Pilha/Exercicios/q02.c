@@ -14,15 +14,17 @@
 
     (após execução da função)
 
-    p1:    
+    p1:            p2:
         2.0
         4.0
         1.0
         3.0
         5.0
     
-    Essa função deve obedecer o seguinte protótipo:
-    
+    Note que ao final dessa função, a pilha p2 vai estar vazia e a pilha p1 conterá 
+    todos os elementos das duas pilhas.Essa função deve obedecer o seguinte protótipo:
+
+
         void concatena(PPilha P1, PPilha P2);
 
     Obs: Use as funções de CRUD_Pilha.h para testes dentro da função principal do seu código.
