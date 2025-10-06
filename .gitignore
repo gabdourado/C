@@ -1,5 +1,7 @@
 .vscode/
 
-Estrutura-de-Dados/Listas/Exercícios/build/
+*build/
 
-Estrutura-de-Dados/Pilha/Exercicios/build/
+*.txt
+
+*.out
