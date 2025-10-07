@@ -4,6 +4,8 @@
     Ocasião: Aula com Mariana Matias para Avaliação (ED, AP1N1, 2025.2)
 */
 
+#include<stdio.h>
+
 int fib(int n) {
     
     if (n == 0) return 0;
@@ -11,8 +13,6 @@ int fib(int n) {
 
     return fib(n - 1) + fib(n - 2);
 }
-
-#include<stdio.h>
 
 int main (void) {
 
