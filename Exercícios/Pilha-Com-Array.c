@@ -5,7 +5,7 @@
         - p_vazia: Verifica se a pilha está vazia
         - p_cheia: Verifica se a pilha está cheia
         - push: Adiciona um elemento no topo
-        - pop: Retira um elemento to topo
+        - pop: Retira um elemento do topo
         - imprime: Imprime todos os elementos da pilha (seguindo a política LIFO)
         - topo: Retorna o elemento do topo (sem alterar a pilha)
         - size_atual: Retorna a quantidade de elementos da pilha
