@@ -37,8 +37,8 @@ struct Cavaleiro {
 typedef struct Cavaleiro cavaleiro;
 
 void mostrarCavaleiro(cavaleiro* C) {
-    printf("Nome: %s", C->nome);
-    printf("Casvalo: %s", C->c.nome);
+    printf("Nome: %s\n", C->nome);
+    printf("Cavalo: %s\n", C->c.nome);
     printf("V_min: %.2f, V_max: %.2f, Estamina: %.2f\n", C->c.v_min, C->c.v_max, C->c.estamina);
 }
 
@@ -62,31 +62,34 @@ void compararCavaleiros (cavaleiro* C1, cavaleiro* C2, float t) {
     dist1 = distanciaPercorrida(C1, t);
     dist2 = distanciaPercorrida(C2, t);
 
-    if (dist1 > dist2) printf("Vencedor: %s", C1->nome);
-    else if (dist1 < dist2) printf("Vencedor: %s", C2->nome);
-    else printf("Empate!");
+    printf("%s percorreu %.2f mestros\n", C1->nome, dist1);
+    printf("%s percorreu %.2f mestros\n", C2->nome, dist2);
+
+    if (dist1 > dist2) printf("Vencedor: %s\n", C1->nome);
+    else if (dist1 < dist2) printf("Vencedor: %s\n", C2->nome);
+    else printf("Empate!\n");
 }
 
 int main (void) {
 
     cavaleiro C1, C2;
+    float time;
 
-    fgets(C1.nome, 10, stdin);
-    fgets(C1.c.nome, 10, stdin);
+    scanf("%s", C1.nome);
+    scanf("%s", C1.c.nome);
     scanf("%f %f %f", &C1.c.v_min, &C1.c.v_max, &C1.c.estamina);
 
-    getchar();
-
-    fgets(C2.nome, 10, stdin);
-    fgets(C2.c.nome, 10, stdin);
+    scanf("%s", C2.nome);
+    scanf("%s", C2.c.nome);
     scanf("%f %f %f", &C2.c.v_min, &C2.c.v_max, &C2.c.estamina);
 
-    getchar();
+    scanf("%f", &time);
 
     mostrarCavaleiro(&C1);
     mostrarCavaleiro(&C2);
 
-    
+    if (verificarCavaleiros(&C1, &C2) == 0) printf("Epa, cavaleiros ou cavalos iguais!");
+    else compararCavaleiros(&C1, &C2, time);
 
     return 0;
 }
