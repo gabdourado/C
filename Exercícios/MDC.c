@@ -8,61 +8,49 @@
 
 #include <stdio.h>
 
+void normalizar(int* x, int* y) {
+    *x = x < 0 ? -(*x) : *x;
+    *y = *y < 0 ? -(*y) : *y;
+}
+
 int mdc_recursivo(int x, int y) {
 
-    x = x < 0 ? -x : x;
-    y = y < 0 ? -y : y;
+    normalizar(&x, &y);
 
-    if (x > y) {
+    if (x == 0) return y;
+    if (y == 0) return x;
 
-        if (x % y == 0) return y;
-        else return mdc_recursivo (y, x % y); 
-
-    } else {
-
-        if (y % x == 0) return x;
-        else return mdc_recursivo (x, y % x); 
-
-    }
+    if (x > y)
+        return mdc_recursivo (y, x % y); 
+    else 
+        return mdc_recursivo (x, y % x);
 }
 
 int mdc_iterativo(int x, int y) {
 
-    
-    x = x < 0 ? -x : x;
-    y = y < 0 ? -y : y;
+    normalizar(&x, &y);
 
-    if (x > y) {
-
-        while(y != 0) {
-            int r = x % y;
-            x = y;
-            y = r;
-        }
-
-        return x;
-
-    } else {
-
-        while(x != 0) {
-        int r = y % x;
-            y = x;
-            x = r;
-        }
-
-        return y;
+    while(y != 0) {
+        int r = x % y;
+        x = y;
+        y = r;
     }
+
+    return x;
+
 }
 
 int main (void) {
 
-    int x, y;
+    int x, y, mdc;
+    char c;
 
-    scanf("%d %d", &x, &y);
+    scanf("%d %d %c", &x, &y, &c);
 
-    int mdc = mdc_iterativo(x, y);
+    if (c == 'R') mdc = mdc_iterativo(x, y);
+    else mdc = mdc_recursivo(x, y);
 
-    printf("mdc(%d, %d) = %d\n", x, y, mdc);
+    printf("%c - mdc(%d, %d) = %d\n", c, x, y, mdc);
 
     return 0;
 }
