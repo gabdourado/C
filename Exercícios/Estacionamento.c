@@ -3,7 +3,10 @@
     chega um novo carro e o estacionamento não está cheio, então o carro ocupa a última posição que 
     está disponível, mas se está cheio, ele vai embora, sem ao menos entrar. Se ao retirar um carro, 
     ele possui uma certa quantidade de carros na sua frente, estes saem e o carro pode sair, voltando 
-    todos os demais seguindo a mesma ordem, mas avançando uma casa. O programa deve monitorar isso.
+    todos os demais seguindo a mesma ordem, mas avançando uma casa. 
+    
+    O programa deve monitorar isso. Imprimindo o número de vagas ocupadas e a quantidade de movimentos
+    que um carro precisou fazer durante todo o momento em que ficou no estacionamento.
 
     Ocasião: Aula com Sabrina para Avaliação (AP1N1, 2025.2)
 
