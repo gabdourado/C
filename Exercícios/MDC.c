@@ -2,7 +2,7 @@
 
     Comando (simplificado): Calular o MDC de dois inteiros x e y de forma iterativa e de forma recursiva.
 
-    Ocasião: Aula com Sabrina para Avaliação (AP1N1, 2025.2) 
+    Ocasião: Aula com Sabrina para Avaliação (ED, AP1N1, 2025.2) 
 
 */
 

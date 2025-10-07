@@ -13,7 +13,7 @@
         - distanciaPercorrida: Calcula a distância percorrida por um Caveleiro
         - compararCavaleiros: Compara a distância percorrida por dois Cavaleiros
 
-    Ocasião: Aula com Sabrina para Avaliação (AP1N1, 2025.2)
+    Ocasião: Aula com Sabrina para Avaliação (ED, AP1N1, 2025.2)
 
 */
 

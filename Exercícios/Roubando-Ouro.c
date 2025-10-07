@@ -7,7 +7,7 @@
     recebe um ponteiro de ponteiro para o array e substitui o maior valor por -1, indicando que o baú foi 
     saqueado. Após a execução, o programa deve exibir o array atualizado.
 
-    Ocasião: Aula com Sabrina para Avaliação (AP1N1, 2025.2)
+    Ocasião: Aula com Sabrina para Avaliação (ED, AP1N1, 2025.2)
 
 */
 

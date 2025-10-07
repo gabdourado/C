@@ -8,7 +8,7 @@
     O programa deve monitorar isso. Imprimindo o número de vagas ocupadas e a quantidade de movimentos
     que um carro precisou fazer durante todo o momento em que ficou no estacionamento.
 
-    Ocasião: Aula com Sabrina para Avaliação (AP1N1, 2025.2)
+    Ocasião: Aula com Sabrina para Avaliação (ED, AP1N1, 2025.2)
 
 */
 
