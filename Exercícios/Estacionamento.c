@@ -10,34 +10,48 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h> 
 #include <string.h>
+
+#define max_size 10
+#define size_placa 8
+
+struct Carro {
+    char placa[size_placa];
+    int manobras;
+};
+
+typedef struct Carro carro;
 
 struct Estacionamento {
     int vaga;
-    char carros[10][8]; 
+    carro carros[max_size]; 
 };
 
 typedef struct Estacionamento estacionamento;
 
-void estacionaCarro(estacionamento* E, char placa[8]) {
-    if (E->vaga == 10) {
+void estacionaCarro(estacionamento* E, char placa[size_placa]) {
+    if (E->vaga == max_size) {
         printf("Estacionamento cheio.\n");
-        exit(1);
+        return;
     }
 
-    strcpy(E->carros[E->vaga], placa);
+    strcpy(E->carros[E->vaga].placa, placa);
+    E->carros[E->vaga].manobras = 0;
     E->vaga += 1;
 
-    printf("Carro: %s - %d/10 da vagas ocupadas\n", placa, E->vaga);
+    printf("Carro: %s - %d/%d da vagas ocupadas\n", placa, E->vaga, max_size);
 }
 
-void retiraCarro(estacionamento* E, char placa[8]) {
+void retiraCarro(estacionamento* E, char placa[size_placa]) {
     for (int i = 0; i < E->vaga; i++) {
-        if (strcmp(E->carros[i], placa) == 0) {
-            for (int j = i; j < E->vaga - 1; j++) strcpy(E->carros[j], E->carros[j+1]);
+
+        if (strcmp(E->carros[i].placa, placa) == 0) {
             
-            printf("Carro: %s - Manobras: %d\n", placa, E->vaga - i - 1);
+            for(int j = i + 1; j < E->vaga; j++) E->carros[j].manobras += 1;
+            
+            printf("Carro: %s - Manobras totais: %d\n", placa, E->carros[i].manobras);
+
+            for (int j = i; j < E->vaga - 1; j++) E->carros[j] = E->carros[j + 1];
             
             E->vaga -= 1;
             break;
@@ -47,11 +61,10 @@ void retiraCarro(estacionamento* E, char placa[8]) {
 
 int main (void) {
 
-    char s, p[8];
+    char s, p[size_placa];
     estacionamento E = {0};
 
-    for (int i = 0; i < 6; i++) {
-        scanf(" %c %s", &s, p);
+    while (scanf(" %c %s", &s, p) != EOF) {
 
         if (s == 'E') {
             estacionaCarro(&E, p);
