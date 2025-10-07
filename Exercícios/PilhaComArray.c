@@ -12,6 +12,8 @@
         - dispo: Retorna a quantidade de espaços disponívis na pilha
         - libera: Libera a pilha alocada dinamicamente
 
+    Ocasião: Aula com Mariana Matias para Avaliação (ED, AP1N1, 2025.2)
+
 */
 
 #include <stdio.h>
