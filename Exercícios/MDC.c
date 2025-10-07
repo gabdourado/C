@@ -29,15 +29,13 @@ int mdc_recursivo(int x, int y) {
 int mdc_iterativo(int x, int y) {
 
     normalizar(&x, &y);
-
+    
     while(y != 0) {
         int r = x % y;
         x = y;
         y = r;
     }
-
     return x;
-
 }
 
 int main (void) {
