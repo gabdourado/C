@@ -24,7 +24,7 @@ struct Cavalo {
     char nome[10];
     float v_min;
     float v_max;
-    float estamina; 
+    float estamina;
 };
 
 typedef struct Cavalo cavalo;
